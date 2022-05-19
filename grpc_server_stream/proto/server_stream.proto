@@ -13,5 +13,6 @@ message StreamReply {
 }
 
 service StreamServer {
+    // 服务端流式rpc，在响应参数前面加 stream。若为客户端流式rpc在请求参数前面加 stream
     rpc ListValue(SimpleRequest) returns (stream StreamReply) {}
 }
